@@ -65,4 +65,4 @@ Complete Responsive :
 
 
 # Hasil Akhir
-Juara : 2 dari 11 Peserta.
+🏆 Juara 2 dari 11 Peserta.
