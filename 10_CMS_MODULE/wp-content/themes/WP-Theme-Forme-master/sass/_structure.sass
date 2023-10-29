@@ -1,0 +1,38 @@
+/* =====================
+ * Structure
+ * ====================*/
+
+html
+	height: 100%
+	background-color: $bckg-color
+
+body
+	background-color: white
+
+.grid
+	+susy-grid-background
+
+/* Set up basic responsive main content column with overrideable max-width */
+body > *,
+body > footer > div
+	+container
+	max-width: $max-width
+	padding-left: $base-font-size
+	padding-right: $base-font-size
+
+/* Full width elements */
+body > footer,
+#wpadminbar
+	+full-width
+
+body > header
+	position: relative
+
+body > footer
+	padding: 1.5em 0
+	background-color: $bckg-color
+	border-top: 1px solid darken($bckg-color, 33%)
+
+/* == Page elements == */
+.entry-content
+	margin-bottom: 1em

@@ -1,0 +1,129 @@
+// ======================
+// Functions and mixins
+// ======================
+
+// Strip the unit (px, em, etc) from a value
+@function strip-units($number)
+	@return $number / ($number * 0 + 1)
+
+// Convert a value (em, rem, %, px) to pixels based on $base-font-size
+@function to-pixels($number)
+	$unit: unit($number)
+	@if $unit == "px"
+		@return $number
+
+	$number: strip-units($number)
+	@if $unit == "%"
+		$number: ($number / 100)
+	
+	@return $base-font-size * $number
+
+// Convert a list to a string with items separated by $glue
+@function unite($list, $glue: ", ")
+	@if length($list) == 1
+		@return $list
+
+	$string: ""
+	@each $item in $list
+		@if $string != ""
+			$string: $string + $glue
+			
+		$string: $string + $item
+	@return $string
+
+
+// ======================
+// Mixins
+// ======================
+
+@mixin image-replacement($height, $image: false, $x: 0, $y: 0)
+	height: 0
+	padding-top: $height
+	overflow: hidden
+	@if $image
+		background-repeat: no-repeat
+		background-position: $x $y
+		+background-image-retina($image)
+
+// If you want the alternate "sign" (i.e. button / badge) version of the icon, specify true as 2nd parameter
+@mixin icon($icon-name, $alternate: false, $replace: false)
+	$icon-classes:	"facebook"	"twitter"	"linkedin"	"rss"	"google-plus"	"pinterest"	"comment"	"comments"	"phone"		"envelope"	"credit-card"	"menu"	"search"	"cart"	"star"	"star-empty"
+	// Icon code maps for full version of FontAwesome:
+	$icon-codes-1:	"\f09a"		"\f099"		"\f0e1"		"\f09e"	"\f0d5"			"\f0d2"		"\f075"		"\f086"		"\f095"		"\f003" 	"\f09d" 		"\f0c9"	"\f002"		"\f07a"	"\f005"	"\f006"
+	$icon-codes-2:	"\f082"		"\f081"		"\f08c"		"\f09e"	"\f0d4"			"\f0d3"		"\f0e5"		"\f0e6"		"\f098"		"\f0e0"		"\f09d" 		"\f0c9"	"\f002"		"\f07a"	"\f005"	"\f006"
+	// Initialize the compiled icon-codes variable as an empty list
+	$icon-codes: zip($icon-codes-1, $icon-codes-2)
+	$version: 1
+	@if $alternate
+		$version: 2
+	
+	// Initialize the icon code to $icon-name
+	$icon-code: $icon-name
+	// SASS lists’ index starts at 1
+	$i: 1
+	
+	// Try to find the code for the given icon name
+	@each $icon-class in $icon-classes
+		@if ($icon-class == $icon-name)
+			$icon-code: nth(nth($icon-codes, $i), $version)
+		
+		$i: $i + 1
+	
+	@if $replace
+		font-family: FontAwesome
+		text-decoration: inherit
+		content: $icon-code
+		speak: none	
+	@else
+		&:before
+			font-family: FontAwesome
+			text-decoration: inherit
+			content: $icon-code
+			speak: none
+
+@mixin full-width
+	max-width: 100%
+	width: 100%
+
+@mixin susy-grid-background
+	+grid-background($total-columns, $column-width, $gutter-width, $base-line-height, 0, $force-fluid: true)
+
+// Based on the compass/typography/lists/bullets pretty-bullets mixin
+// Modified to accept padding as 2nd argument in em, %, or px, and to assume other values based on $base-font-size and $base-line-height
+@mixin list-bullets($bullet-icon, $padding: 1em, $line-height: $base-line-height)
+	$width: image-width($bullet-icon)
+	$height: image-height($bullet-icon)
+	// We need $padding in pixels (if it is already in pixels, to-pixels will return it)
+	$padding: to-pixels($padding) 
+
+	li
+		padding-left: $padding
+		background: image-url($bullet-icon) no-repeat ($padding - $width) / 2 ($line-height - $height) / 2
+		list-style-type: none
+
+@mixin dark-text($text-color: black, $text-shadow-color: transparent)
+	color: $text-color
+	-webkit-font-smoothing: subpixel-antialiased
+	@if $text-shadow-color != false
+		+text-shadow($default-text-shadow-h-offset $default-text-shadow-v-offset $default-text-shadow-blur $text-shadow-color)
+
+@mixin light-text($text-color: white, $text-shadow-color: $default-text-shadow-color, $text-shadow-h-offset: $default-text-shadow-h-offset, $text-shadow-v-offset: $default-text-shadow-v-offset, $text-shadow-blur: $default-text-shadow-blur)
+	color: $text-color
+	-webkit-font-smoothing: antialiased
+	@if $text-shadow-color != false
+		+text-shadow($text-shadow-h-offset $text-shadow-v-offset $text-shadow-blur $text-shadow-color)
+
+// Use to generate input placeholder selectors for different browsers
+// From https://github.com/michaelsacca/Compass-Placeholder-Text-Mixin
+@mixin input-placeholder
+	input
+		&.placeholder
+			@content
+		&:-moz-placeholder
+			@content
+		&::-moz-placeholder
+			@content
+		&:-ms-input-placeholder
+			@content
+		&::-webkit-input-placeholder
+			@content 

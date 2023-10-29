@@ -1,0 +1,69 @@
+html,
+body {
+	height:100%;
+}
+
+body.login {
+	border-top:1px solid #fff;
+}
+
+#login {
+	border-radius:5px;
+	box-shadow:rgba(0,0,0,0.7) 0 4px 10px -1px;
+	padding:0 0 20px 0;
+	margin:7em auto 0 auto;
+	background:#f9f9f9;
+}
+
+#loginform,
+#lostpasswordform,
+#registerform {
+	box-shadow:none;
+	border-radius:0;
+	border:none;
+	background:transparent;
+	margin:0;
+}
+
+#login h1 a {
+	background:transparent;
+	width:312px;
+	height:67px;
+	margin-left:7px;
+	border-radius:3px;
+	margin-bottom:10px;
+}
+
+#login #nav,
+#login #backtoblog {
+	margin:0 0 0 12px;
+}
+
+#login #nav a:hover,
+#login #backtoblog a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.submit #wp-submit {
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3),0 1px 0 rgba(0,0,0,.15);
+	text-shadow: none;
+}
+
+input[type=checkbox]:checked:before {
+	color:#000;
+}
+
+.message {
+	color:#000;
+	width:275px;
+}
+
+.cl-powered-by {
+
+	margin: 1rem;
+	font-weight: bold;
+	text-align: center;
+	opacity: 0.75;
+
+}

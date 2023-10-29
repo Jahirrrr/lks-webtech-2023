@@ -1,0 +1,490 @@
+/*!
+ * Theme Name: Forme
+ * Description: Starter theme for WordPress custom theme development based on TidyThemes' BlankSlate starter theme.
+ * Author: Pure Cobalt
+ * Author URI: http://www.purecobalt.com/
+ * Version: 0.6.0
+ * Tags: custom-menu, light, responsive, featured-images, microformats, sticky-post, threaded-comments, translation-ready, SASS, retina, vertical-rhythm, pagination, WP-PageNavi
+ * License: GNU General Public License
+ * License URI: https://www.gnu.org/licenses/gpl.html
+ */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* 
+ * Retina helper mixins for Compass
+ * http://www.joelambert.co.uk
+ * 
+ * Copyright 2012, Joe Lambert.
+ * Free to use under the MIT license.
+ * http://joelambert.mit-license.org/
+ */
+/* =====================
+ * Typography
+ * ==================== */
+/* = Set up web fonts = */
+/* Icon font */
+@font-face {
+  font-family: "FontAwesome";
+  src: url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/font/fontawesome-webfont.eot);
+  src: url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/font/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/font/fontawesome-webfont.woff) format("woff"), url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/font/fontawesome-webfont.ttf) format("truetype"), url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/font/fontawesome-webfont.svg#fontawesomeregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Establish vertical rhythm baseline */
+/* line 106, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 75%;
+  line-height: 1.5em; }
+
+/* line 23, sass/_typography.sass */
+body {
+  color: #333333;
+  font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 27, sass/_typography.sass */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, serif;
+  font-weight: bold; }
+
+/* line 35, sass/_typography.sass */
+h1 {
+  font-size: 2.66667em;
+  line-height: 1.125em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.5625em;
+  text-transform: uppercase; }
+
+/* line 40, sass/_typography.sass */
+h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.75em; }
+
+/* line 44, sass/_typography.sass */
+h3 {
+  font-size: 1.66667em;
+  line-height: 1.35em;
+  margin-top: 0.9em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.9em; }
+
+/* line 48, sass/_typography.sass */
+h4 {
+  font-size: 1.33333em;
+  line-height: 1.6875em;
+  margin-top: 1.125em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.125em;
+  margin-top: 1.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
+
+/* line 54, sass/_typography.sass */
+h6 {
+  font-size: 0.91667em;
+  line-height: 1.63636em;
+  margin-top: 1.63636em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.63636em;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px; }
+
+/* line 61, sass/_typography.sass */
+h5, p, ul, ol, dl {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
+
+/* line 66, sass/_typography.sass */
+h5 h5, h5 p, h5 ul, h5 ol, h5 dl, p h5, p p, p ul, p ol, p dl, ul h5, ul p, ul ul, ul ol, ul dl, ol h5, ol p, ol ul, ol ol, ol dl, dl h5, dl p, dl ul, dl ol, dl dl {
+  margin-top: 0.75em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.75em; }
+
+/* line 69, sass/_typography.sass */
+li,
+dt,
+dd,
+th,
+td {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em; }
+
+/* line 76, sass/_typography.sass */
+p:first-child {
+  margin-top: 0; }
+
+/* line 79, sass/_typography.sass */
+code,
+pre {
+  font-family: Menlo, "Andale Mono", "DejaVu Sans Mono", Consolas, monospace; }
+
+/* line 85, sass/_typography.sass */
+.entry-content ol, .comment-content ol, .text-widget ol, .textwidget ol {
+  list-style: decimal; }
+  /* line 88, sass/_typography.sass */
+  .entry-content ol ol, .comment-content ol ol, .text-widget ol ol, .textwidget ol ol {
+    list-style: lower-alpha; }
+/* line 99, sass/_helpers.sass */
+.entry-content ul li, .comment-content ul li, .text-widget ul li, .textwidget ul li {
+  padding-left: 24px;
+  background: url('img/list-bullet.png?1365197358') no-repeat 9.5px 6.5px;
+  list-style-type: none; }
+/* line 94, sass/_typography.sass */
+.entry-content ol,
+.entry-content dd, .comment-content ol,
+.comment-content dd, .text-widget ol,
+.text-widget dd, .textwidget ol,
+.textwidget dd {
+  padding-left: 2em; }
+/* line 98, sass/_typography.sass */
+.entry-content ol ol, .entry-content ol dd, .entry-content dd ol, .entry-content dd dd, .comment-content ol ol, .comment-content ol dd, .comment-content dd ol, .comment-content dd dd, .text-widget ol ol, .text-widget ol dd, .text-widget dd ol, .text-widget dd dd, .textwidget ol ol, .textwidget ol dd, .textwidget dd ol, .textwidget dd dd {
+  padding-left: 1.5em; }
+/* line 101, sass/_typography.sass */
+.entry-content li, .comment-content li, .text-widget li, .textwidget li {
+  line-height: 1.35em;
+  margin-top: 0.825em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.825em; }
+/* line 105, sass/_typography.sass */
+.entry-content blockquote, .comment-content blockquote, .text-widget blockquote, .textwidget blockquote {
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #f2f2f2; }
+  /* line 111, sass/_typography.sass */
+  .entry-content blockquote > :last-child, .comment-content blockquote > :last-child, .text-widget blockquote > :last-child, .textwidget blockquote > :last-child {
+    margin-bottom: 0; }
+
+/* line 114, sass/_typography.sass */
+dt,
+strong {
+  font-weight: bold; }
+
+/* line 118, sass/_typography.sass */
+em {
+  font-style: italic; }
+
+/* line 121, sass/_typography.sass */
+a,
+a:link {
+  color: #ec2c2e;
+  text-decoration: none; }
+
+/* line 126, sass/_typography.sass */
+a:hover {
+  text-decoration: underline; }
+
+/* line 129, sass/_typography.sass */
+sup,
+sub {
+  position: relative;
+  bottom: 0.55em;
+  font-size: 0.75em; }
+
+/* line 135, sass/_typography.sass */
+sub {
+  bottom: auto;
+  top: 0.25em; }
+
+/* =====================
+ * Structure
+ * ==================== */
+/* line 5, sass/_structure.sass */
+html {
+  height: 100%;
+  background-color: #e5e5e5; }
+
+/* line 9, sass/_structure.sass */
+body {
+  background-color: white; }
+
+/* line 12, sass/_structure.sass */
+.grid {
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(121, 121, 229, 0.25) 0%, rgba(79, 79, 221, 0.25) 15%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 17%, rgba(121, 121, 229, 0.25) 17%, rgba(79, 79, 221, 0.25) 32%, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0) 34%, rgba(121, 121, 229, 0.25) 34%, rgba(79, 79, 221, 0.25) 49%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 51%, rgba(121, 121, 229, 0.25) 51%, rgba(79, 79, 221, 0.25) 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 68%, rgba(121, 121, 229, 0.25) 68%, rgba(79, 79, 221, 0.25) 83%, rgba(0, 0, 0, 0) 83%, rgba(0, 0, 0, 0) 85%, rgba(121, 121, 229, 0.25) 85%, rgba(79, 79, 221, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(121, 121, 229, 0.25) 0%, rgba(79, 79, 221, 0.25) 15%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 17%, rgba(121, 121, 229, 0.25) 17%, rgba(79, 79, 221, 0.25) 32%, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0) 34%, rgba(121, 121, 229, 0.25) 34%, rgba(79, 79, 221, 0.25) 49%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 51%, rgba(121, 121, 229, 0.25) 51%, rgba(79, 79, 221, 0.25) 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 68%, rgba(121, 121, 229, 0.25) 68%, rgba(79, 79, 221, 0.25) 83%, rgba(0, 0, 0, 0) 83%, rgba(0, 0, 0, 0) 85%, rgba(121, 121, 229, 0.25) 85%, rgba(79, 79, 221, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(121, 121, 229, 0.25) 0%, rgba(79, 79, 221, 0.25) 15%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 17%, rgba(121, 121, 229, 0.25) 17%, rgba(79, 79, 221, 0.25) 32%, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0) 34%, rgba(121, 121, 229, 0.25) 34%, rgba(79, 79, 221, 0.25) 49%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 51%, rgba(121, 121, 229, 0.25) 51%, rgba(79, 79, 221, 0.25) 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 68%, rgba(121, 121, 229, 0.25) 68%, rgba(79, 79, 221, 0.25) 83%, rgba(0, 0, 0, 0) 83%, rgba(0, 0, 0, 0) 85%, rgba(121, 121, 229, 0.25) 85%, rgba(79, 79, 221, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(121, 121, 229, 0.25) 0%, rgba(79, 79, 221, 0.25) 15%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 17%, rgba(121, 121, 229, 0.25) 17%, rgba(79, 79, 221, 0.25) 32%, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0) 34%, rgba(121, 121, 229, 0.25) 34%, rgba(79, 79, 221, 0.25) 49%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 51%, rgba(121, 121, 229, 0.25) 51%, rgba(79, 79, 221, 0.25) 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 68%, rgba(121, 121, 229, 0.25) 68%, rgba(79, 79, 221, 0.25) 83%, rgba(0, 0, 0, 0) 83%, rgba(0, 0, 0, 0) 85%, rgba(121, 121, 229, 0.25) 85%, rgba(79, 79, 221, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  -moz-background-size: 100% 18px, auto;
+  -o-background-size: 100% 18px, auto;
+  -webkit-background-size: 100% 18px, auto;
+  background-size: 100% 18px, auto;
+  background-position: left top; }
+
+/* Set up basic responsive main content column with overrideable max-width */
+/* line 16, sass/_structure.sass */
+body > *,
+body > footer > div {
+  *zoom: 1;
+  max-width: 100%;
+  _width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding-left: 12px;
+  padding-right: 12px; }
+  /* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/utilities/general/_clearfix.scss */
+  body > *:after,
+  body > footer > div:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Full width elements */
+/* line 24, sass/_structure.sass */
+body > footer,
+#wpadminbar {
+  max-width: 100%;
+  width: 100%; }
+
+/* line 28, sass/_structure.sass */
+body > header {
+  position: relative; }
+
+/* line 31, sass/_structure.sass */
+body > footer {
+  padding: 1.5em 0;
+  background-color: #e5e5e5;
+  border-top: 1px solid #919191; }
+
+/* == Page elements == */
+/* line 37, sass/_structure.sass */
+.entry-content {
+  margin-bottom: 1em; }
+
+/* =========================
+ * Navigation
+ * ======================== */
+/* = General = */
+/* line 6, sass/_navigation.sass */
+.menu-item {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background: none;
+  padding: 0; }
+  /* line 11, sass/_navigation.sass */
+  .menu-item a {
+    display: inline-block;
+    vertical-align: top;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline; }
+  /* line 14, sass/_navigation.sass */
+  .menu-item:after {
+    display: inline-block;
+    vertical-align: top;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    content: "|";
+    width: 0;
+    overflow: hidden;
+    border-right: 1px solid #b3b3b3;
+    margin: 0 0.6em 0 1em; }
+  /* line 22, sass/_navigation.sass */
+  .menu-item:last-child:after {
+    content: "";
+    border-right: none;
+    margin: 0; }
+
+/* line 27, sass/_navigation.sass */
+ul.menu {
+  margin: 0;
+  padding: 0; }
+  /* line 31, sass/_navigation.sass */
+  ul.menu .social {
+    width: 1.5em;
+    margin: 0 0.5em;
+    overflow: hidden; }
+    /* line 36, sass/_navigation.sass */
+    ul.menu .social:after {
+      display: none; }
+    /* line 39, sass/_navigation.sass */
+    ul.menu .social.facebook {
+      width: 1em; }
+    /* line 42, sass/_navigation.sass */
+    ul.menu .social a {
+      color: #6e6e6e;
+      padding: 0 6px; }
+      /* line 46, sass/_navigation.sass */
+      ul.menu .social a:hover {
+        text-decoration: none;
+        color: #333333; }
+      /* line 50, sass/_navigation.sass */
+      ul.menu .social a:before {
+        padding-right: 1.5em; }
+    /* line 78, sass/_helpers.sass */
+    ul.menu .social.facebook a:before {
+      font-family: FontAwesome;
+      text-decoration: inherit;
+      content: "\f09a";
+      speak: none; }
+    /* line 78, sass/_helpers.sass */
+    ul.menu .social.twitter a:before {
+      font-family: FontAwesome;
+      text-decoration: inherit;
+      content: "\f099";
+      speak: none; }
+    /* line 78, sass/_helpers.sass */
+    ul.menu .social.linkedin a:before {
+      font-family: FontAwesome;
+      text-decoration: inherit;
+      content: "\f0e1";
+      speak: none; }
+
+/* line 62, sass/_navigation.sass */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: 4px;
+  color: #ec2c2e;
+  cursor: pointer; }
+  /* line 78, sass/_helpers.sass */
+  .menu-toggle:before {
+    font-family: FontAwesome;
+    text-decoration: inherit;
+    content: "\f0c9";
+    speak: none; }
+  /* line 70, sass/_navigation.sass */
+  .menu-toggle:hover {
+    color: #a30f10; }
+  /* line 73, sass/_navigation.sass */
+  .menu-toggle:active {
+    color: #460607; }
+
+/* = Main menu = */
+@media screen and (max-width: 675px) {
+  /* line 77, sass/_navigation.sass */
+  .menu-main-menu-container {
+    position: relative;
+    right: auto;
+    bottom: auto; } }
+@media screen and (max-width: 525px) {
+  /* line 85, sass/_navigation.sass */
+  .menu-main-menu-container .menu-item {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding: 0.4em 0; }
+    /* line 91, sass/_navigation.sass */
+    .menu-main-menu-container .menu-item:after {
+      display: none; } }
+@media screen and (max-width: 525px) {
+  /* line 94, sass/_navigation.sass */
+  .menu-main-menu-container > div {
+    background: #e5e5e5;
+    max-height: 0;
+    overflow: hidden;
+    -moz-transition-property: max-height;
+    -o-transition-property: max-height;
+    -webkit-transition-property: max-height;
+    transition-property: max-height;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; }
+    /* line 102, sass/_navigation.sass */
+    .menu-main-menu-container > div.expanded {
+      max-height: 300px; }
+    /* line 105, sass/_navigation.sass */
+    .menu-main-menu-container > div .menu {
+      border-top: 2px solid #919191;
+      border-bottom: 2px solid #919191;
+      padding: 0.5em 0; } }
+@media screen and (max-width: 525px) {
+  /* line 110, sass/_navigation.sass */
+  .menu-main-menu-container .menu-toggle {
+    display: inline-block;
+    vertical-align: top;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    position: absolute;
+    top: -58px;
+    right: 0;
+    font-size: 3em;
+    line-height: 1.25em; } }

@@ -1,0 +1,35 @@
+{
+  "name": "wordpress-theme-base",
+  "version": "1.0.0",
+  "description": "A base for bespoke WordPress themes.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charlesbjerg/wordpress-theme-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charlesbjerg/wordpress-theme-base/issues"
+  },
+  "homepage": "https://github.com/Charlesbjerg/wordpress-theme-base#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-purgecss": "^4.0.3"
+  },
+  "browserslist": [
+    "defaults",
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
+}

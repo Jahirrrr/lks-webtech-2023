@@ -1,0 +1,116 @@
+/* =========================
+ * Navigation
+ * ========================*/
+
+/* = General = */
+.menu-item
+	+inline-block
+	background: none
+	padding: 0
+
+	a
+		+inline-block
+	
+	&:after
+		+inline-block
+		content: "|"
+		width: 0
+		overflow: hidden
+		border-right: 1px solid $grey
+		margin: 0 0.6em 0 1em
+		
+	&:last-child:after
+		content: ""
+		border-right: none
+		margin: 0
+
+ul.menu
+	margin: 0
+	padding: 0
+	
+	.social
+		width: 1.5em
+		margin: 0 0.5em
+		overflow: hidden
+		
+		&:after
+			display: none
+		
+		&.facebook
+			width: 1em
+		
+		a
+			color: lighten($text-color, 23%)
+			padding: 0 6px
+			
+			&:hover
+				text-decoration: none
+				color: $text-color
+			
+			&:before
+				padding-right: 1.5em
+			
+		&.facebook a
+			+icon("facebook")
+
+		&.twitter a
+			+icon("twitter")
+
+		&.linkedin a
+			+icon("linkedin")
+
+.menu-toggle
+	display: none
+	+adjust-font-size-to(18px)
+	padding: 4px
+	color: $accent-color
+	cursor: pointer
+	+icon("menu")
+	
+	&:hover
+		color: darken($accent-color, 20%)
+
+	&:active
+		color: darken($accent-color, 40%)
+
+/* = Main menu = */
+.menu-main-menu-container
+	
+	@media screen and (max-width: $narrow-width + 150)
+		position: relative
+		right: auto
+		bottom: auto
+		
+	@media screen and (max-width: $narrow-width)
+		.menu-item
+			display: block
+			text-align: center
+			+adjust-font-size-to(18px)
+			padding: 0.4em 0
+			
+			&:after
+				display: none
+	
+	> div
+		@media screen and (max-width: $narrow-width)
+			background: $bckg-color
+			max-height: 0
+			overflow: hidden
+			+transition-property(max-height)
+			+transition-duration(0.4s)
+			
+			&.expanded
+				max-height: 300px
+
+			.menu
+				border-top: 2px solid darken($bckg-color, 33%)
+				border-bottom: 2px solid darken($bckg-color, 33%)
+				padding: 0.5em 0
+	
+	.menu-toggle
+		@media screen and (max-width: $narrow-width)
+			+inline-block
+			position: absolute
+			top: -58px
+			right: 0
+			+adjust-font-size-to(36px)

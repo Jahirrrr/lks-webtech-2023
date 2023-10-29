@@ -1,0 +1,41 @@
+/* 
+
+***********COLOR CHART**************
+
+=======Shades of grey=======
+
+- Pale-grey -- rgb(249, 249, 249) -- backgrounds, small highlights over white, footer typography
+
+- Dark-grey -- rgb(90, 90, 90) -- backgrounds, text, shadows, buttons and icons
+
+- Medium-grey -- rgb(230, 230, 230) -- contrast lines, buttons
+
+
+=========Polychrome============
+
+Orange -- rgb(247, 147, 30) -- gradients (header, buttons), illustration
+
+Dark-Orange -- rgb(237, 92, 36) -- titles, links, icons, gradients, lines
+
+Green -- rgb(13, 214, 140) -- actions - buttons and confirmations, "Gratis"
+
+
+*/
+
+
+/* ============= STAR ========================== */
+
+
+* { font-family: Trebuchet MS, Helvetica, Tahoma, sans-serif !important;}
+
+
+#copyright {
+    width: 100%;
+    height: 28px;
+    border-top: 1px solid #E0E0E0;
+    position: absolute;
+    bottom: 0px; 
+    left: 0px;
+    right: 25px;
+    text-align: center; 
+    }

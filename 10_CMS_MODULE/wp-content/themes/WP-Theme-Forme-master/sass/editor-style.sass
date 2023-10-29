@@ -1,0 +1,65 @@
+// ======================
+// Compass/plugin imports
+// ======================
+
+// Import core compass framework http://compass-style.org/reference/compass/
+@import "compass"
+// Import and apply global reset
+@import "compass/reset"
+// Import vertical rhythm http://compass-style.org/reference/compass/typography/vertical_rhythm/
+@import "compass/typography/vertical_rhythm"
+
+
+// ======================
+// Functions and mixins
+// ======================
+
+// Import custom functions and mixins
+// Note: functions come before variables so they can be used anywhere
+@import "helpers"
+
+
+// ======================
+// Variables
+// ======================
+
+// = Defaults
+// Vertical rhythm
+$base-font-size: 12px
+$base-line-height: 18px
+// At the cost of causing some disruptions to vertical rhythm, make sure line-heights do not vary too wildly
+$round-to-nearest-half-line: true
+// General defaults
+$default-text-shadow-color: black
+$default-text-shadow-h-offset: 0px
+$default-text-shadow-v-offset: 1px
+$inline-block-alignment: top
+$legacy-support-for-ie: false
+$legacy-support-for-mozilla: false
+// Grid variables
+$total-width: 1000px
+$total-columns: 6
+$column-width-abs: 150px
+$column-width: $column-width-abs / $total-width * 100%
+$gutter-width-abs: 20px
+$gutter-width: $gutter-width-abs / $total-width * 100%
+$grid-padding: 0
+
+// = Custom variables
+$accent-color: rgb(236, 44, 46)
+$bckg-color: rgb(229, 229, 229)
+$grey: rgb(179, 179, 179)
+$text-color: rgb(51, 51, 51)
+$header-height: 84px
+// Regular content selectors
+$content-selectors: ".mceContentBody"
+
+
+// ======================
+// Import SASS partials
+// ======================
+@import "typography"
+@import "editor"
+// @import "elements"
+// @import "modules"
+
