@@ -43,5 +43,26 @@ Complete Responsive :
 - Tablet :white_check_mark:
 - Mobile :white_check_mark:
 
+## Gambar Website
+
+### Dekstop
+
+<p align="center">
+<img src="https://github.com/Jahirrrr/lks-webtech-2023/blob/37010469b507b9ed33e25cfaf52398da9e23db2c/10_CMS_MODULE/desain/Dekstop_MXC.png" alt="image"></a>
+</p>
+
+### Tablet
+
+<p align="center">
+<img src="https://github.com/Jahirrrr/lks-webtech-2023/blob/37010469b507b9ed33e25cfaf52398da9e23db2c/10_CMS_MODULE/desain/Tablet_MXC.png" alt="image"></a>
+</p>
+
+### Mobile
+
+<p align="center">
+<img src="https://github.com/Jahirrrr/lks-webtech-2023/blob/37010469b507b9ed33e25cfaf52398da9e23db2c/10_CMS_MODULE/desain/Mobile_MXC.png" alt="image"></a>
+</p>
+
+
 # Hasil Akhir
 Juara : 2 dari 11 Peserta.
