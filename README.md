@@ -1,5 +1,9 @@
 # Lomba Kompetensi Siswa (LKS) Web Technology Result Tingkat Kota Jakarta Pusat 2023
 
+<p align="center">
+<img src="https://github.com/Jahirrrr/lks-webtech-2023/blob/7750715041fa7d31ffefe72b05520e1ced7d00dd/images%20(8).png" alt="image"></a>
+</p>
+
 ## Main Module
 - Module CMS
 
